@@ -1,17 +1,137 @@
+:root {
+  --forest: #0b3d2e;
+  --leaf: #2f7d32;
+  --mist: #f3f8f4;
+  --text: #1b1b1b;
+  --accent: #ffd166;
+}
+
 * {
-  margin:0px;
-  padding:0px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--mist);
 }
 
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+.hero {
+  min-height: 75vh;
+  color: white;
+  background:
+    linear-gradient(rgba(11, 61, 46, 0.76), rgba(11, 61, 46, 0.74)),
+    url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  padding: 1.2rem 1.2rem 4rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.nav h1 {
+  font-size: clamp(1.15rem, 3vw, 1.8rem);
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.tag {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+  font-size: clamp(1.8rem, 4.8vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  margin-bottom: 1.25rem;
+  max-width: 60ch;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--accent);
+  color: #223;
+  padding: 0.7rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.btn-small {
+  padding: 0.5rem 0.8rem;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.2rem;
+}
+
+.section h3 {
+  font-size: clamp(1.3rem, 3.2vw, 2rem);
+  margin-bottom: 1rem;
+  color: var(--forest);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+
+.card h4 {
+  color: var(--leaf);
+  margin-bottom: 0.5rem;
+}
+
+.alt {
+  background: #e8f2ea;
+  border-radius: 14px;
+}
+
+.alt ul {
+  padding-left: 1.2rem;
+}
+
+.alt li {
+  margin-bottom: 0.4rem;
+}
+
+.book a {
+  color: var(--forest);
+}
+
+.book .btn {
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.1rem;
+  background: var(--forest);
+  color: white;
 }
